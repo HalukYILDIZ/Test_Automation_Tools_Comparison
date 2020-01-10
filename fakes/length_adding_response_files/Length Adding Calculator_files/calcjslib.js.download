@@ -1,0 +1,165 @@
+// calcjslib.js
+
+// (C)1996 2014 Copyright calculator.com
+// All rigths reserved
+// DUPLICATION of this code in whole or in part
+// without prior written permission from calculator.com
+// IS PROHIBITED
+
+
+
+
+ function GetOffset (object, offset) {
+            if (!object)
+                return;
+            offset.x += object.offsetLeft;
+            offset.y += object.offsetTop;
+
+            GetOffset (object.offsetParent, offset);
+        }
+var current_tip='';
+function hideToolTip(id){
+	var elm = document.getElementById(id);
+	var telm = document.getElementById('t'+id);
+	elm.style.display ='none';		
+	telm.style.display ='none';
+	
+}
+function toolTip(id , apos){
+//	alert('hello');
+	var elm = document.getElementById(id);
+	var aelm = document.getElementById('a'+id);
+	var celm = document.getElementById('calc_calc');
+	var telm = document.getElementById('t'+id);
+	var felm = document.getElementById('cal_form');
+	var ielm = document.getElementById('calc_instructions');
+	
+	
+	if (elm.style.display =='none'){
+		
+		if (current_tip!=''){
+			hideToolTip(current_tip);//hide it
+		}	
+		current_tip=id;
+
+		
+		//alert(elm.offsetTop+" "+ celm.offsetTop+" "+ offset.y);	
+		var offset = {x : 0, y : 0};
+		var offset2 = {x : 0, y : 0};
+		var offset3 = {x : 0, y : 0};
+		var offset4 = {x : 0, y : 0};
+		//alert(elm.offsetTop+" "+ celm.offsetTop+" "+ offset.y);	
+            	GetOffset (celm , offset );
+            	GetOffset (aelm , offset2 );
+            	GetOffset (felm , offset3 );
+            	GetOffset (ielm , offset4 );
+            	
+            	var kedro= aelm.offsetWidth/2 ;
+            	var kedrovert= aelm.offsetHeight;
+            	//alert(kedro);
+            	//alert(aelm.offsetTop);
+            	if(apos >= 0){
+        		//var foo = 'calc_calc='+ offset.y +' cal_form='+ offset3.y +' a='+offset2.y;
+        		//alert(foo);
+            		
+            		elm.style.top = offset2.y-offset3.y+aelm.offsetHeight+14+'px';  //14 for the height of the arrow tip
+            		telm.style.top = offset2.y-offset3.y+aelm.offsetHeight+'px';
+            		
+            		//var foo = 'calc_calc='+ offset.x +' cal_form='+ offset3.x +' a='+offset2.x;
+        		//alert(foo);
+
+            		
+            		telm.style.left = offset2.x-offset3.x+kedro-14+'px';//14 for the half the width of the arrow tip
+
+            		//telm.style.left = 1+'px';
+            		//alert(foo);
+            		            		
+        	}else{
+            		//var foo = 'form h='+ ielm.offsetHeight +' inst_='+ offset4.y +' a='+offset2.y;
+        		//alert(foo);
+
+            		elm.style.bottom = aelm.offsetHeight+14+'px';
+            		telm.style.bottom = aelm.offsetHeight+'px';
+            		telm.style.borderWidth ='14px 14px 0 14px';
+            		
+        		//var foo = 'calc_calc='+ offset.x +' cal_form='+ offset3.x+' calc_instr='+ offset4.x +' a='+offset2.x;
+        		//alert(foo);
+        		//telm.style.left = 1+'px';
+        		telm.style.left = offset2.x-offset3.x+kedro-14+'px';//14 for the half the width of the arrow tip
+
+
+        	}
+            	
+		elm.style.display='block';
+		telm.style.display='block';
+	}else{
+		elm.style.display ='none';		
+		telm.style.display ='none';		
+	}	
+}
+function toolTip2(id , apos){
+	
+	var elm = document.getElementById(id);
+	var aelm = document.getElementById('a'+id);
+	
+	if (elm.style.display =='none'){
+		var offset = {x : 0, y : 0};
+            	GetOffset (aelm , offset );
+            	elm.style.top = aelm.offsetTop+offset.y+apos+'px';
+		elm.style.display='block';
+            	//alert(elm.offsetTop+" "+ offset.x+" "+ offset.y);	
+	}else{
+		elm.style.display ='none';		
+	}	
+}
+function clearForm(theform){
+
+//var el=document.getElementById("calcform");
+//var frm_elements = el.elements;	
+var frm_elements = theform.elements;	
+
+var frm_elements = document.getElementsByTagName('input');
+
+for (i = 0; i < frm_elements.length; i++)
+{
+    field_type = frm_elements[i].type.toLowerCase();
+    
+    switch (field_type)
+    {
+    case "text":
+    case "number":
+    case "password":
+    case "textarea":
+    //case "hidden":
+        frm_elements[i].value = "";
+        break;
+    case "radio":
+    case "checkbox":
+        if (frm_elements[i].checked)
+        {
+            frm_elements[i].checked = false;
+        }
+        break;
+    case "select-one":
+    case "select-multi":
+        frm_elements[i].selectedIndex = -1;
+        break;
+    default:
+        break;
+    }
+}
+}
+function toggleShow(id){
+	//alert(id);
+	var elm = document.getElementById(id);
+	var aelm = document.getElementById('a'+id);
+	
+	if (elm.style.display =='none'){
+		aelm.style.backgroundImage="url('/common/img/arrowdown_blue.png')";
+		elm.style.display='block';
+	}else{
+		aelm.style.backgroundImage="url('/common/img/arrowright_blue.png')";
+		elm.style.display ='none';		
+	}	
+//return false;
+}

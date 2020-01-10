@@ -1,0 +1,122 @@
+    var edgeSupport_637869 = "f";
+    var isIEBrowser_637869=false;
+    var browserVersion_637869;
+
+    function initiateNewRequest_637869(edgeSupport, html5Support) {
+            var newUrl = "https://ads.everesttech.net/ads/mts/15956/4249?DFA_Click_Tracker=https%3A%2F%2Fadclick.g.doubleclick.net%2Fpcs%2Fclick%3Fxai%3DAKAOjsuxLctjtFNcutUcYmdXSFXJS2ZcBhSRv2QvHvUX8k-IvV0kzrDh4vp8K9K2pcJg1C3YJxQ4NubvL8tviQHirElSEfJks1PRTcVR-MmaMGuvYuc97427edaa0ylqQ4xQeJd2dSg42nLEqcHH0bjfk_oNSTdf1Vdmlu8xHLxZpMLVo97OxtnJJEdiCB8RIuKTmtHAO71A6sa-3NhSDwYblH3FZnrYg8l-4ZQ9Wdy6LUWWT4lZ83FO8oY757HOBZdIy77lOsR486DvlGf1x1j1HslnpH6YcKutBz2ZojO4kUcdzpPBdbMTITopKU2pNgejQ4wcY16h3qLwklVqAXXwG8NMMftCC10TDUpVA1DoiNam6WPi4fQo3OMqw_q7Vkv1RHvf01j2PyJ2vFZmEuVZ-iOEEyYNnrrgmZfsq9JBxn7z2poem-zmPjmU5RNqxCgxFtBgorIcSsHwPBQWJADze4Q2lFeyBgFKOg8wKVWJT5qFKUDIpuQSvt-qFxlf2v4LrpG-aUmZQZ5yOKX_bv2Pxj3qkb9jbPwIOgHBL9lCuyeWd5osNMx0hPorK58w4WXX0_fAhi8JupbSav1cEwdXMkMPDnYpDBiBIKcyAa6hir1gAlQwzJmL5y0WxaGBtW4atb5LZvyDF1CbAVzCz-hD1W_GErRs_n7D9zMuw7ouhnjqSODY01etWaKocav5W1H0MsjP-fr-iMmDkLGaVPEQU0XpZ12X3lpX_NfeNH6Y8rlGLo6iYqneXZhVYTkGoqgB8hj9vW2M_y5-ulkpIw8jVbMM5bc7eQt0-hzNfLIsEJ7b4-ropcVn_IdpP6YXnAqOyo4q2MhfqzSrr8SFIyEvdhQ1pnsYkPy0qYqCflM_dnekPIVmrxtXmot6oZiUV4ZM5mayfY06VeH2RNAV5Pjx4fY_dTvqELSyaYqj2qL3EOaL0RmZ1q8e_DYT8wuNyNr_ylcjQZxeKSeeSfCk3dkVhS7uS1DttLCsTMVWukBJPRksnfVt43G_mg%26sai%3DAMfl-YSJHdgFqkzhnowybDWMTMo4nIggdUlqbp6g7FC9Fa5rf28hKjYhLgrzO1IjVB_oBh33KRZFVDfBrf9SxCeVN7p5SLzp5riFV41J5jaJxOaIXlhWB3ibXMIf6Tb6C-8hrH3hO8Ab203oS2LbFG3YraYhLkgR5498GHf9GHZDk1x9049Gtt-qwaSIXgBiPvi1dlOV9PYmijvY5pUx0olPAxkTpB15vQqjbrQpEEriRh8TwJ_BGC4xsiTmavxMu2c4TT5w5a9SzL0Z5kvFl_6Bj6mFBjPG8MeM20eB9MtwelOabtkAQQJMd9WLNoRbmFWMF6NFetakdRfsSMmhYMcmOQg4OugBmAa26DdA19gou3YszLCAX_d3%26sig%3DCg0ArKJSzMKRwEb80WrNEAE%26urlfix%3D1%26adurl%3D&DFA_BuyId=23595808&DFA_PlacementId=263785084&DFA_AdId=459036675&DFA_CreativeId=110258021&DFA_SiteId=3654125&TC_1=2000138&TC_2=23595808&TC_3=263785084&TC_4=110258021&TC_5=dcmadvertiserid|8404942$dcmcampaignid|23595808$dcmadid|459036675$dcmrenderingid|110035438$dcmsiteid|3654125$dcmplacementid|263785084$customer|Microsoft$dv360auctionid|ct=TR&st=&city=0&dma=0&zp=06800&bw=4&Placement_ID=263785084" + "&edge=" + edgeSupport + "&html5="+ html5Support +"&nr=" + Math.random();
+            if(document.readyState === "complete")
+            {
+                var sc = document.createElement("script");
+                sc.setAttribute("type","text/javascript");
+                sc.setAttribute("src",newUrl);
+                if (document.currentScript) {
+                    var pn = document.currentScript.parentNode;
+                    var sbn = document.currentScript.nextSibling;
+                    if (sbn) {
+                        pn.insertBefore(sc,sbn);
+                    } else {
+                        pn.appendChild(sc);
+                    }
+                } else {
+                    document.body.appendChild(sc);
+                }
+            } else {
+                document.write('<' + 'script type="text/javascript" src="' + newUrl +'"></' + 'script>');
+            }
+        }
+
+     function getInternetExplorerVersion_637869() {
+         // Returns the version of Internet Explorer or a -1
+         // (indicating the use of another browser).
+
+             var rv = -1; // Return value assumes failure.
+             if (navigator.appName == 'Microsoft Internet Explorer') {
+                 isIEBrowser_637869=true;
+                 var ua = navigator.userAgent;
+                 var re  = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+
+                 if (re.exec(ua) != null)
+                     rv = parseFloat( RegExp.$1 );
+             }
+
+             return rv;
+         }
+
+      //returns true if ie version is less than 9, say ie6, ie7, ie8
+         // -1 for non IE browsers.
+         function isIEBrowserWithVersionLessThan9_637869 () {
+
+             browserVersion_637869 = getInternetExplorerVersion_637869();  //-1 for non IE browsers
+             if((browserVersion_637869 != -1) && (browserVersion_637869 < 9)) {
+                 return true;
+
+             }
+             return false;
+         }
+
+    //code to detect Edge Features, courtesy  (http://dl.dropboxusercontent.com/u/13483458/test-edge.html)
+    var testEle_637869=document.createElement("div_637869");
+    function isSupported_637869(a){
+
+        var d=testEle_637869.style,e;
+        for(i=0;i<a.length;i++)
+            if(e=a[i],d[e]!==void 0)
+                return!0;
+        return!1
+    }
+
+    function supportsRGBA_637869(){
+
+        testEle_637869.cssText="background-color:rgba(150,255,150,.5)";
+        if((""+testEle_637869.style.backgroundColor).indexOf("rgba")==0)
+            return!0;
+        return!1
+    }
+
+    var hasTransform_637869=isSupported_637869([
+        "transformProperty",
+        "WebkitTransform",
+        "MozTransform",
+        "OTransform",
+        "msTransform"
+    ]),
+
+    hasSVG_637869=!!document.createElementNS&&!!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect,
+    hasRGBA_637869=supportsRGBA_637869(),
+    hasJSON_637869=window.JSON&&window.JSON.parse&&window.JSON.stringify,
+    readyToPlay=!1;
+
+    function isIEBrowserVersion9_637869() {
+        return (isIEBrowser_637869 && (browserVersion_637869 == 9)) ? true : false;
+    }
+
+    function isEdgeSupported_637869() {
+        if(isIEBrowserVersion9_637869()) {
+            return "y";           //hardcoding IE9 edge support.
+        }
+        if(hasTransform_637869) {
+            if(requiresSVG_637869&&!hasSVG_637869)
+                return "f";
+            return "y";
+        }
+        return "f";
+    }
+
+    function isCanvasSupported_637869(){
+      var elem = document.createElement('canvas');
+      return !!(elem.getContext && elem.getContext('2d'));
+    }
+
+    function isHTML5FeaturesSupported_637869() {
+         return (isCanvasSupported_637869()) ? "y" : "f";
+    }
+
+    var requiresSVG_637869=false;
+    //edge detection code end
+
+    //Edge is not supported in IE 6,7,8. Hence hardcoding edge as not supported for the same.
+   // edgeSupport_637869 = (isIEBrowserWithVersionLessThan9_637869()) ? "f" : isHTMLFeaturesSupported_637869(featureArray_637869);
+    edgeSupport_637869 = (isIEBrowserWithVersionLessThan9_637869()) ? "f" : isEdgeSupported_637869();
+    html5Support_637869 = isHTML5FeaturesSupported_637869();
+
+    initiateNewRequest_637869(edgeSupport_637869, html5Support_637869);

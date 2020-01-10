@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)https://calculator.com/calculate/feetinches/ -->
+<html lang="en-US">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<title>Length Adding Calculator</title>
+
+	<meta name="keywords" content="length adding calculator, feet, inches, imperial">
+	<meta name="description" content="The Length Adding calculator allows you to add feet and inches.">
+	<meta name="viewport" content="user-scalable=no,width=device-width">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+
+
+	<!-- Bootstrap Core CSS -->
+	<link rel="stylesheet" href="./Length Adding Calculator_files/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!-- Custom Fonts -->
+	<link href="./Length Adding Calculator_files/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="./Length Adding Calculator_files/all.css"
+		integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
+
+
+
+	<link rel="stylesheet" href="./Length Adding Calculator_files/calcWarrior.css" type="text/css">
+	<link rel="shortcut icon" href="https://calculator.com/img/favicon.ico" type="image/x-icon">
+
+	<style>
+		#calc_dir {
+			display: block;
+		}
+
+		.navbar {
+			padding-left: 5em;
+			padding-right: 5em;
+		}
+	</style>
+	<link rel="stylesheet" href="./Length Adding Calculator_files/feetinches.css" type="text/css">
+
+
+	<!-- javed -->
+
+	<style type="text/css">
+		.fb_hidden {
+			position: absolute;
+			top: -10000px;
+			z-index: 10001
+		}
+
+		.fb_reposition {
+			overflow: hidden;
+			position: relative
+		}
+
+		.fb_invisible {
+			display: none
+		}
+
+		.fb_reset {
+			background: none;
+			border: 0;
+			border-spacing: 0;
+			color: #000;
+			cursor: auto;
+			direction: ltr;
+			font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+			font-size: 11px;
+			font-style: normal;
+			font-variant: normal;
+			font-weight: normal;
+			letter-spacing: normal;
+			line-height: 1;
+			margin: 0;
+			overflow: visible;
+			padding: 0;
+			text-align: left;
+			text-decoration: none;
+			text-indent: 0;
+			text-shadow: none;
+			text-transform: none;
+			visibility: visible;
+			white-space: normal;
+			word-spacing: normal
+		}
+
+		.fb_reset>div {
+			overflow: hidden
+		}
+
+		@keyframes fb_transform {
+			from {
+				opacity: 0;
+				transform: scale(.95)
+			}
+
+			to {
+				opacity: 1;
+				transform: scale(1)
+			}
+		}
+
+		.fb_animate {
+			animation: fb_transform .3s forwards
+		}
+
+		.fb_dialog {
+			background: rgba(82, 82, 82, .7);
+			position: absolute;
+			top: -10000px;
+			z-index: 10001
+		}
+
+		.fb_dialog_advanced {
+			border-radius: 8px;
+			padding: 10px
+		}
+
+		.fb_dialog_content {
+			background: #fff;
+			color: #373737
+		}
+
+		.fb_dialog_close_icon {
+			background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;
+			cursor: pointer;
+			display: block;
+			height: 15px;
+			position: absolute;
+			right: 18px;
+			top: 17px;
+			width: 15px
+		}
+
+		.fb_dialog_mobile .fb_dialog_close_icon {
+			left: 5px;
+			right: auto;
+			top: 5px
+		}
+
+		.fb_dialog_padding {
+			background-color: transparent;
+			position: absolute;
+			width: 1px;
+			z-index: -1
+		}
+
+		.fb_dialog_close_icon:hover {
+			background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent
+		}
+
+		.fb_dialog_close_icon:active {
+			background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent
+		}
+
+		.fb_dialog_iframe {
+			line-height: 0
+		}
+
+		.fb_dialog_content .dialog_title {
+			background: #6d84b4;
+			border: 1px solid #365899;
+			color: #fff;
+			font-size: 14px;
+			font-weight: bold;
+			margin: 0
+		}
+
+		.fb_dialog_content .dialog_title>span {
+			background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;
+			float: left;
+			padding: 5px 0 7px 26px
+		}
+
+		body.fb_hidden {
+			height: 100%;
+			left: 0;
+			margin: 0;
+			overflow: visible;
+			position: absolute;
+			top: -10000px;
+			transform: none;
+			width: 100%
+		}
+
+		.fb_dialog.fb_dialog_mobile.loading {
+			background: url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;
+			min-height: 100%;
+			min-width: 100%;
+			overflow: hidden;
+			position: absolute;
+			top: 0;
+			z-index: 10001
+		}
+
+		.fb_dialog.fb_dialog_mobile.loading.centered {
+			background: none;
+			height: auto;
+			min-height: initial;
+			min-width: initial;
+			width: auto
+		}
+
+		.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner {
+			width: 100%
+		}
+
+		.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content {
+			background: none
+		}
+
+		.loading.centered #fb_dialog_loader_close {
+			clear: both;
+			color: #fff;
+			display: block;
+			font-size: 18px;
+			padding-top: 20px
+		}
+
+		#fb-root #fb_dialog_ipad_overlay {
+			background: rgba(0, 0, 0, .4);
+			bottom: 0;
+			left: 0;
+			min-height: 100%;
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 100%;
+			z-index: 10000
+		}
+
+		#fb-root #fb_dialog_ipad_overlay.hidden {
+			display: none
+		}
+
+		.fb_dialog.fb_dialog_mobile.loading iframe {
+			visibility: hidden
+		}
+
+		.fb_dialog_mobile .fb_dialog_iframe {
+			position: sticky;
+			top: 0
+		}
+
+		.fb_dialog_content .dialog_header {
+			background: linear-gradient(from(#738aba), to(#2c4987));
+			border-bottom: 1px solid;
+			border-color: #043b87;
+			box-shadow: white 0 1px 1px -1px inset;
+			color: #fff;
+			font: bold 14px Helvetica, sans-serif;
+			text-overflow: ellipsis;
+			text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0;
+			vertical-align: middle;
+			white-space: nowrap
+		}
+
+		.fb_dialog_content .dialog_header table {
+			height: 43px;
+			width: 100%
+		}
+
+		.fb_dialog_content .dialog_header td.header_left {
+			font-size: 12px;
+			padding-left: 5px;
+			vertical-align: middle;
+			width: 60px
+		}
+
+		.fb_dialog_content .dialog_header td.header_right {
+			font-size: 12px;
+			padding-right: 5px;
+			vertical-align: middle;
+			width: 60px
+		}
+
+		.fb_dialog_content .touchable_button {
+			background: linear-gradient(from(#4267B2), to(#2a4887));
+			background-clip: padding-box;
+			border: 1px solid #29487d;
+			border-radius: 3px;
+			display: inline-block;
+			line-height: 18px;
+			margin-top: 3px;
+			max-width: 85px;
+			padding: 4px 12px;
+			position: relative
+		}
+
+		.fb_dialog_content .dialog_header .touchable_button input {
+			background: none;
+			border: none;
+			color: #fff;
+			font: bold 12px Helvetica, sans-serif;
+			margin: 2px -12px;
+			padding: 2px 6px 3px 6px;
+			text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0
+		}
+
+		.fb_dialog_content .dialog_header .header_center {
+			color: #fff;
+			font-size: 16px;
+			font-weight: bold;
+			line-height: 18px;
+			text-align: center;
+			vertical-align: middle
+		}
+
+		.fb_dialog_content .dialog_content {
+			background: url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;
+			border: 1px solid #4a4a4a;
+			border-bottom: 0;
+			border-top: 0;
+			height: 150px
+		}
+
+		.fb_dialog_content .dialog_footer {
+			background: #f5f6f7;
+			border: 1px solid #4a4a4a;
+			border-top-color: #ccc;
+			height: 40px
+		}
+
+		#fb_dialog_loader_close {
+			float: left
+		}
+
+		.fb_dialog.fb_dialog_mobile .fb_dialog_close_button {
+			text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0
+		}
+
+		.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon {
+			visibility: hidden
+		}
+
+		#fb_dialog_loader_spinner {
+			animation: rotateSpinner 1.2s linear infinite;
+			background-color: transparent;
+			background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
+			height: 24px;
+			width: 24px
+		}
+
+		@keyframes rotateSpinner {
+			0% {
+				transform: rotate(0deg)
+			}
+
+			100% {
+				transform: rotate(360deg)
+			}
+		}
+
+		.fb_iframe_widget {
+			display: inline-block;
+			position: relative
+		}
+
+		.fb_iframe_widget span {
+			display: inline-block;
+			position: relative;
+			text-align: justify
+		}
+
+		.fb_iframe_widget iframe {
+			position: absolute
+		}
+
+		.fb_iframe_widget_fluid_desktop,
+		.fb_iframe_widget_fluid_desktop span,
+		.fb_iframe_widget_fluid_desktop iframe {
+			max-width: 100%
+		}
+
+		.fb_iframe_widget_fluid_desktop iframe {
+			min-width: 220px;
+			position: relative
+		}
+
+		.fb_iframe_widget_lift {
+			z-index: 1
+		}
+
+		.fb_iframe_widget_fluid {
+			display: inline
+		}
+
+		.fb_iframe_widget_fluid span {
+			width: 100%
+		}
+	</style>
+	<style type="text/css" id="b5bb87b0-b2a4-445d-88a6-7fe4ba375b11">
+		.d5f7bf2c-2ca6-4d00-bff5-3bdb741df923 {
+			position: relative !important;
+			border-radius: 0.2em !important;
+			padding: 0px !important;
+			margin: 0px !important;
+		}
+
+		.cc1a4120-a970-44d0-bf9b-9de1f88a4159 .ssh-close {
+			position: absolute;
+			left: -8px;
+			top: -8px;
+			width: 16px;
+			height: 16px;
+			z-index: 999;
+			border: none;
+			background: url("data:image/png;base64,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") no-repeat border-box;
+			animation-duration: 275ms;
+			animation-timing-function: ease-out;
+			box-shadow: none;
+			animation-name: aafd2458-54c9-40f6-a57e-cc7b74d68166;
+		}
+
+		.cc1a4120-a970-44d0-bf9b-9de1f88a4159 .ssh-close:hover,
+		.cc1a4120-a970-44d0-bf9b-9de1f88a4159 .ssh-close:focus {
+			background-image: url("data:image/png;base64,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");
+		}
+
+		@media print {
+			.cc1a4120-a970-44d0-bf9b-9de1f88a4159 {
+				box-shadow: unset !important;
+				-webkit-print-color-adjust: exact !important;
+			}
+		}
+
+		@keyframes aafd2458-54c9-40f6-a57e-cc7b74d68166 {
+			0% {
+				opacity: 0;
+				transform: scale(0.6);
+			}
+
+			100% {
+				opacity: 1;
+				transform: scale(1);
+			}
+		}
+
+		@keyframes cd34690d-f9f2-4581-8b77-4486a796698a {
+			100% {
+				opacity: 0;
+				transform: scale(0.3);
+			}
+		}
+
+		.cc1a4120-a970-44d0-bf9b-9de1f88a4159 {
+			background-color: rgba(238, 238, 238, 0.8);
+			color: rgb(170, 170, 170);
+			font: inherit;
+			box-shadow: rgb(238, 238, 238) 0px 0px 0.35em;
+			text-shadow: none !important;
+		}
+
+		.default-red-aa94e3d5-ab2f-4205-b74e-18ce31c7c0ce {
+			box-shadow: rgb(255, 128, 128) 0px 0px 0.35em;
+			background-color: rgba(255, 128, 128, 0.8) !important;
+			color: rgb(0, 0, 0) !important;
+		}
+
+		.default-orange-da01945e-1964-4d27-8a6c-3331e1fe7f14 {
+			box-shadow: rgb(255, 210, 170) 0px 0px 0.35em;
+			background-color: rgba(255, 210, 170, 0.8) !important;
+			color: rgb(0, 0, 0) !important;
+		}
+
+		.default-yellow-aaddcf5c-0e41-4f83-8a64-58c91f7c6250 {
+			box-shadow: rgb(255, 255, 170) 0px 0px 0.35em;
+			background-color: rgba(255, 255, 170, 0.8) !important;
+			color: rgb(0, 0, 0) !important;
+		}
+
+		.default-green-c4d41e0a-e40f-4c3f-91ad-2d66481614c2 {
+			box-shadow: rgb(170, 255, 170) 0px 0px 0.35em;
+			background-color: rgba(170, 255, 170, 0.8) !important;
+			color: rgb(0, 0, 0) !important;
+		}
+
+		.default-cyan-f88e8827-e652-4d79-a9d9-f6c8b8ec9e2b {
+			box-shadow: rgb(170, 255, 255) 0px 0px 0.35em;
+			background-color: rgba(170, 255, 255, 0.8) !important;
+			color: rgb(0, 0, 0) !important;
+		}
+
+		.default-purple-c472dcdb-f2b8-41ab-bb1e-2fb293df172a {
+			box-shadow: rgb(255, 170, 255) 0px 0px 0.35em;
+			background-color: rgba(255, 170, 255, 0.8) !important;
+			color: rgb(0, 0, 0) !important;
+		}
+
+		.default-grey-da7cb902-89c6-46fe-b0e7-d3b35aaf237a {
+			box-shadow: rgb(119, 119, 119) 0px 0px 0.35em;
+			background-color: rgba(119, 119, 119, 0.8) !important;
+			color: rgb(255, 255, 255) !important;
+		}
+	</style>
+</head>
+
+<body onload="docReady();">
+	<!-- Navigation -->
+	<nav class="navbar navbar-dark bg-dark navbar-expand-lg navbar-fixed-top" role="navigation">
+		<a class="navbar-brand" href="https://calculator.com/">calculator.com</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+
+
+			<ul class="nav navbar-nav ml-auto ">
+				<li class="nav-item">
+
+				</li>
+
+
+				<li class="nav-item"> <a class="nav-link" href="https://calculator.com/directory">Directory</a>
+				</li>
+
+				<li class="nav-item  dropdown">
+
+					<a class="nav-link dropdown-toggle" href="https://calculator.com/calculate/feetinches/#" id="navbarDropdown"
+						role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						About
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="https://calculator.com/site/about.php">About us</a>
+						<a class="dropdown-item" href="https://calculator.com/site/privacy.php">Privacy statement</a>
+						<a class="dropdown-item" href="https://calculator.com/site/terms.php">Terms of service</a>
+						<!--   <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="#">Something else here</a> -->
+					</div>
+
+				</li>
+
+				<li class="nav-item"> <a class="nav-link" href="https://calculator.com/site/contact.php">Contact</a>
+				</li>
+
+			</ul>
+			<!--    <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <input name="show" value="search" type="hidden">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form> 
+            -->
+			<!--    <div class="container"> -->
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<!--     <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                
+            </div> -->
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<!--          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                		<li >
+                     	
+                    </li>
+                	
+                    <li class="active">
+                        <a href="/index.php">Home</a>
+                    </li>
+                    
+                    
+                    <li class="dropdown">
+                        <a href="directory.php">Directory</a>
+                    </li>
+                   
+
+                   
+                    <li>
+                        <a href="/calc/contact.html">Contact</a>
+                    </li>
+
+                </ul>
+            </div>
+            -->
+			<!-- /.navbar-collapse -->
+		</div>
+	</nav>
+
+	<div id="awa_outside">
+		<div id="awa_head"></div>
+		<div id="awa_body">
+
+
+			<div id="awa_main">
+				<div style="display:block;">
+					<div id="calc_top">
+						<div id="calc_logo"><a href="https://calculator.com/"><img
+									src="./Length Adding Calculator_files/calclogobig.jpg" alt="calculator.com"></a></div>
+						<div id="calc_title">
+							<h2>Length Adding Calculator</h2>
+						</div>
+					</div> <!-- end calc_top div -->
+
+					<div id="calc_main">
+
+						<div id="calc_dir">
+
+							<b></b>
+							<hr>
+							<ul style="padding-left:1em;">
+
+
+
+
+
+								<li><a href="https://calculator.com/calculate/bass-boat-speed">High Performance Bass Fishing Boat Speed
+										Calculator</a></li>
+								<li><a href="https://calculator.com/calculate/currency">Currency calculator</a></li>
+								<li><a href="https://calculator.com/calculate/data-size">Data Size Calculator</a></li>
+								<li><a href="https://calculator.com/calculate/love">The Love Calculator</a></li>
+								<li><a href="https://calculator.com/calculate/mortgage-qualification"></a></li>
+								<li><a href="https://calculator.com/calculate/mph">Miles per Hour Calculator</a></li>
+								<li><a href="https://calculator.com/calculate/percentage">Percentage calculator</a></li>
+								<li><a href="https://calculator.com/calculate/perches">Perches to square meters and square feet
+										Calculator</a></li>
+								<li><a href="https://calculator.com/calculate/stem-and-leaf-plot">Stem and Leaf Plot</a></li>
+								<li><a href="https://calculator.com/calculate/tiling">Simple Tiling Calculator</a></li>
+							</ul>
+
+						</div>
+
+						<div id="calc_calc">
+							<center>
+
+								<table width="100%" border="0" cellpadding="5" cellspacing="0" bgcolor="ededed">
+									<tbody>
+										<tr>
+											<td>
+												<center><b>
+														<font face="Arial" color="#505050"> Your input values:</font>
+													</b>
+													<p>
+													</p>
+													<table border="0">
+
+
+														<tbody>
+															<tr>
+																<td align="right">
+																	<font face="arial" size="-1"></font>
+																</td>
+																<td>
+																	<font face="arial" size="-1"></font>
+																</td>
+															</tr>
+
+															<tr>
+																<td align="right">
+																	<font face="arial" size="-1"> Length 1: </font>
+																</td>
+																<td>
+																	<font face="arial" size="-1"> <b> 200 </b> feet <b> 200 </b>inches</font>
+																</td>
+															</tr>
+															<tr>
+																<td align="right">
+																	<font face="arial" size="-1"> Length 2: </font>
+																</td>
+																<td>
+																	<font face="arial" size="-1"> <b> 200 </b> feet <b> 200 </b>inches</font>
+																</td>
+															</tr>
+
+
+														</tbody>
+													</table>
+												</center>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+
+								<table width="100%" border="0" cellpadding="5" cellspacing="0" bgcolor="ededed">
+									<tbody>
+										<tr>
+											<td>
+												<center><b>
+														<font face="Arial" color="#505050"> Results:</font>
+													</b>
+													<p>
+													</p>
+													<table border="0">
+
+
+														<tbody>
+															<tr>
+																<td>
+																	<font face="arial" size="-1">Total of <b>433</b> feet and <b>4</b> inches</font>
+																</td>
+															</tr>
+
+
+
+
+														</tbody>
+													</table>
+												</center>
+												<a name="about"></a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+
+
+
+								<div id="cal_form" style="position:relative;">
+									<form id="main" name="main" method="post">
+										<div id="add" class="fieldset-div" style="">
+											<input type="hidden" name="formname" value="add">
+											<div class="calcfield"><a style="visibility:visible" id="auntWidth-tip" href="javascript:void(0);"
+													onclick="toolTip(&#39;untWidth-tip&#39; , 30);">Length 1</a> <br> <input id="untWidth"
+													type="number" class="mlfield" value="200" name="untWidth"> feet</div>
+											<!-- end of calcfield -->
+											<div class="calcfield"><a style="visibility:hidden" id="asubuntWidth-tip"
+													href="javascript:void(0);" onclick="toolTip(&#39;subuntWidth-tip&#39; , 30);"></a> <br> <input
+													id="subuntWidth" type="number" class="mlfield" value="200" name="subuntWidth"> inches</div>
+											<!-- end of calcfield -->
+											<div class="calcfield"><a style="visibility:visible" id="auntLength-tip"
+													href="javascript:void(0);" onclick="toolTip(&#39;untLength-tip&#39; , 30);">Length 2</a> <br>
+												<input id="untLength" type="number" class="mlfield" value="200" name="untLength"> feet</div>
+											<!-- end of calcfield -->
+											<div class="calcfield"><a style="visibility:hidden" id="asubuntLength-tip"
+													href="javascript:void(0);" onclick="toolTip(&#39;subuntLength-tip&#39; , 30);"></a> <br>
+												<input id="subuntLength" type="number" class="mlfield" value="200" name="subuntLength"> inches
+											</div>
+											<!-- end of calcfield -->
+										</div> <!-- end of class=fieldset-div -->
+										<fieldset class="noframe">
+
+											<div id="buttons" class="fieldset-div" style="">
+												<input type="hidden" name="formname" value="buttons"><input type="submit" class="mlfield_submit"
+													name="calculate" value="Calculate"> <input type="button" name="clear" value="Clear"
+													onclick="clearForm(this.form);"> </div> <!-- end of class=fieldset-div -->
+										</fieldset>
+									</form>
+								</div>
+								<div id="calc_instructions">
+
+									<div class="tooltip" id="instructions-tip" style="display:none;"
+										onclick="toolTip(&#39;instructions-tip&#39;);">
+										To use this calculator change the above fields as desired and click on the Calculate button.
+										Units:
+										To change the units select the desired units and click on the Change Units button.
+										Length 1: Enter the 1st length in meters and cm
+										Length 2: Enter the 2nd length in meters and cm
+									</div>
+									<div class="tip" id="tinstructions-tip" style="display:none;"></div>
+									<a id="ainstructions-tip" href="javascript:void(0);"
+										onclick="toolTip(&#39;instructions-tip&#39; , -40);">Instructions</a>
+
+								</div>
+
+
+
+
+							</center>
+						</div>
+
+					</div>
+					<div id="calc_social">
+
+
+
+						<!-- Place this tag where you want the su badge to render -->
+						<div style="float:right; position:relative; padding-right:224px;">
+							<div id="___plusone_0" style="position: absolute; width: 450px; left: -10000px;"><iframe
+									ng-non-bindable="" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no"
+									style="position:absolute;top:-10000px;width:450px;margin:0px;border-style:none" tabindex="0"
+									vspace="0" width="100%" id="I0_1578123113192" name="I0_1578123113192"
+									src="./Length Adding Calculator_files/fastbutton.html" data-gapiattached="true"></iframe></div>
+							<g:plusone size="medium" data-gapiscan="true" data-onload="true" data-gapistub="true"></g:plusone>
+							<iframe scrolling="no" frameborder="0" allowtransparency="true"
+								src="./Length Adding Calculator_files/saved_resource(1).html" width="74" height="18"
+								id="iframe-stmblpn-widget-1" style="overflow: hidden; margin: 0px; padding: 0px; border: 0px;"></iframe>
+							<!-- -->
+						</div>
+						<!-- Place this snippet wherever appropriate  -->
+
+
+						<div id="fb-root" class=" fb_reset">
+							<div style="position: absolute; top: -10000px; width: 0px; height: 0px;">
+								<div><iframe name="fb_xdm_frame_https" id="fb_xdm_frame_https" aria-hidden="true"
+										title="Facebook Cross Domain Communication Frame" tabindex="-1" frameborder="0"
+										allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media"
+										src="./Length Adding Calculator_files/xd_arbiter.html" style="border: none;"></iframe></div>
+								<div></div>
+							</div>
+						</div>
+
+
+						<div style="padding-left:5px;padding-bottom:10px;padding-right:20px;float:left;position: relative;"
+							class="fb-like fb_iframe_widget" data-send="true" data-layout="button_count" data-width="90"
+							data-show-faces="false" fb-xfbml-state="rendered"
+							fb-iframe-plugin-query="app_id=166182316757661&amp;container_width=25&amp;href=https%3A%2F%2Fcalculator.com%2Fcalculate%2Ffeetinches%2F&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;send=true&amp;show_faces=false&amp;width=90">
+							<span style="vertical-align: bottom; width: 225px; height: 20px;"><iframe name="f1209792bbe2b4"
+									width="90px" height="1000px" title="fb:like Facebook Social Plugin" frameborder="0"
+									allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media"
+									src="./Length Adding Calculator_files/like.html"
+									style="border: none; visibility: visible; width: 225px; height: 20px;" class=""></iframe></span></div>
+
+
+						<iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true"
+							class="twitter-share-button twitter-share-button-rendered twitter-tweet-button"
+							style="position: static; visibility: visible; width: 60px; height: 20px;" title="Twitter Tweet Button"
+							src="./Length Adding Calculator_files/tweet_button.69e02060c7c44baddf1b5629549acc0c.en.html"></iframe>
+
+
+
+						<div style=" margin-right:-25px;position:relative;">
+
+
+						</div>
+
+
+
+
+					</div>
+
+					<div id="calc_parts">
+						<div class="part">
+							<h2 class="part_title"><a id="aexplain"
+									style="background:url(/common/img/arrowright_blue.png) left no-repeat;padding-left:20px"
+									href="javascript:void(0);" onclick="toggleShow(&quot;explain&quot;);">Description</a></h2>
+							<div id="explain" class="part_text" style="display:none;">
+								<div class="roundrect">
+									<ul>
+										<li><strong>This calculator allows you to calculate the total length given two lengths in composite
+												units, like feet and inches.</strong></li>
+										<li><strong>Units:&nbsp;</strong>Works both in metric and imperial units</li>
+									</ul>
+								</div>
+							</div>
+						</div><!-- end of part -->
+						<div class="part">
+							<h2 class="part_title"><a id="acredits"
+									style="background:url(/common/img/arrowright_blue.png) left no-repeat;padding-left:20px"
+									href="javascript:void(0);" onclick="toggleShow(&quot;credits&quot;);">Credits</a></h2>
+							<div id="credits" class="part_text" style="display:none;">
+								<div class="roundrect">Length Adding Calculator version 0.1<br>Writen by Nicholas Tsakiris Alston<br>
+								</div>
+							</div>
+						</div><!-- end of part -->
+					</div>
+
+					<div id="calc_bottom">©2020 calculator.com. All rights reserved.</div>
+				</div>
+			</div> <!-- end awa_main div -->
+
+
+		</div> <!-- end awa_body div -->
+
+		<div id="awa_foot"></div>
+	</div> <!-- end outside div -->
+
+	<!-- jQuery  -->
+
+	<!-- Bootstrap Core JavaScript -->
+
+	<script src="./Length Adding Calculator_files/bootstrap.min.js.download"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+	</script>
+	<!-- Bootstrap Core JavaScript -->
+
+
+
+
+
+
+	<iframe name="oauth2relay488217100" id="oauth2relay488217100"
+		src="./Length Adding Calculator_files/postmessageRelay.html" tabindex="-1" aria-hidden="true"
+		style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe><iframe
+		id="google_osd_static_frame_7637577282190" name="google_osd_static_frame"
+		style="display: none; width: 0px; height: 0px;"
+		src="./Length Adding Calculator_files/saved_resource(4).html"></iframe><iframe scrolling="no" frameborder="0"
+		allowtransparency="true" src="./Length Adding Calculator_files/widget_iframe.69e02060c7c44baddf1b5629549acc0c.html"
+		title="Twitter settings iframe" style="display: none;"></iframe><ins class="adsbygoogle adsbygoogle-noablate"
+		data-adsbygoogle-status="done" style="display: none !important;"><ins id="aswift_3_expand"
+			style="display:inline-table;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><ins
+				id="aswift_3_anchor"
+				style="display:block;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><iframe
+					frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no"
+					allowfullscreen="true"
+					onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}"
+					id="aswift_3" name="aswift_3" style="left:0;position:absolute;top:0;border:0px;width:0px;height:0px;"
+					src="./Length Adding Calculator_files/saved_resource(5).html"></iframe></ins></ins></ins>
+</body><iframe id="google_esf" name="google_esf" src="./Length Adding Calculator_files/zrt_lookup.html"
+	data-ad-client="ca-pub-4113556842493173" style="display: none;"></iframe>
+
+</html>

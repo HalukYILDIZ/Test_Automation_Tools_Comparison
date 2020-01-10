@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)https://calculator.com/calculate/loan/ -->
+<html lang="en-US">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<head>
+		<title>General Loan Calculator</title>
+
+		<meta name="keywords" content="">
+		<meta name="description"
+			content="This calculator allows you to calculate monthly payment, interest rate, total payments, and total interest of your loan.">
+		<meta name="viewport" content="user-scalable=no,width=device-width">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+
+
+		<!-- Bootstrap Core CSS -->
+		<link rel="stylesheet" href="./General Loan Calculator response_files/bootstrap.min.css"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<!-- Custom Fonts -->
+		<link href="./General Loan Calculator response_files/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="./General Loan Calculator response_files/all.css"
+			integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
+
+
+		<link rel="stylesheet" href="./General Loan Calculator response_files/calcWarrior.css" type="text/css">
+		<link rel="shortcut icon" href="https://calculator.com/img/favicon.ico" type="image/x-icon">
+		<style>
+			#calc_dir {
+				display: block;
+			}
+
+			.navbar {
+				padding-left: 5em;
+				padding-right: 5em;
+			}
+		</style>
+		<link rel="stylesheet" href="./General Loan Calculator response_files/loan.css" type="text/css">
+
+
+		<!-- javed -->
+		<script src="./General Loan Calculator response_files/jquery-3.4.1.min.js.download"
+			integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="./General Loan Calculator response_files/jquery-ui.js.download"></script>
+		<link rel="stylesheet" href="./General Loan Calculator response_files/jquery-ui.css" type="text/css">
+
+
+		<link rel="preload" href="./General Loan Calculator response_files/f(1).txt" as="script">
+
+		<link rel="preload" href="./General Loan Calculator response_files/f(2).txt" as="script">
+
+	</head>
+</head>
+
+<body onload="docReady();">
+	<!-- Navigation -->
+	<nav class="navbar navbar-dark bg-dark navbar-expand-lg navbar-fixed-top" role="navigation">
+		<a class="navbar-brand" href="https://calculator.com/">calculator.com</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+
+
+			<ul class="nav navbar-nav ml-auto ">
+				<li class="nav-item">
+
+				</li>
+
+
+				<li class="nav-item"> <a class="nav-link" href="https://calculator.com/directory">Directory</a>
+				</li>
+
+				<li class="nav-item  dropdown">
+
+					<a class="nav-link dropdown-toggle" href="https://calculator.com/calculate/loan/#" id="navbarDropdown"
+						role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						About
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="https://calculator.com/site/about.php">About us</a>
+						<a class="dropdown-item" href="https://calculator.com/site/privacy.php">Privacy statement</a>
+						<a class="dropdown-item" href="https://calculator.com/site/terms.php">Terms of service</a>
+						<!--   <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="#">Something else here</a> -->
+					</div>
+
+				</li>
+
+				<li class="nav-item"> <a class="nav-link" href="https://calculator.com/site/contact.php">Contact</a>
+				</li>
+
+			</ul>
+			<!--    <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <input name="show" value="search" type="hidden">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form> 
+            -->
+			<!--    <div class="container"> -->
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<!--     <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                
+            </div> -->
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<!--          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                		<li >
+                     	
+                    </li>
+                	
+                    <li class="active">
+                        <a href="/index.php">Home</a>
+                    </li>
+                    
+                    
+                    <li class="dropdown">
+                        <a href="directory.php">Directory</a>
+                    </li>
+                   
+
+                   
+                    <li>
+                        <a href="/calc/contact.html">Contact</a>
+                    </li>
+
+                </ul>
+            </div>
+            -->
+			<!-- /.navbar-collapse -->
+		</div>
+	</nav>
+
+	<div id="awa_outside">
+		<div id="awa_head"></div>
+		<div id="awa_body">
+
+			<div id="awa_left">
+
+
+
+
+				<ins id="aswift_0_expand"
+					style="display:inline-table;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px;background-color:transparent;"
+					data-ad-slot="7272841536"><ins id="aswift_0_anchor"
+						style="display:block;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px;background-color:transparent;">
+
+					</ins></ins>
+
+			</div>
+			<div id="awa_main">
+				<div style="display:block;">
+					<div id="calc_top">
+						<div id="calc_logo"><a href="https://calculator.com/"><img
+									src="./General Loan Calculator response_files/calclogobig.jpg" alt="calculator.com"></a></div>
+						<div id="calc_title">
+							<h2>General Loan</h2>
+						</div>
+					</div> <!-- end calc_top div -->
+
+					<div id="calc_main">
+
+						<div id="calc_dir">
+
+							<b></b>
+							<hr>
+							<ul style="padding-left:1em;">
+
+
+
+
+
+								<li><a href="https://calculator.com/calculate/annuity">Future Value/Annuity Calculation</a></li>
+								<li><a href="https://calculator.com/calculate/bond">Bond Valuation</a></li>
+								<li><a href="https://calculator.com/calculate/loan-length">Loan Length Calculator</a></li>
+								<li><a href="https://calculator.com/calculate/millionaire">How long until you are a millionaire?</a>
+								</li>
+								<li><a href="https://calculator.com/calculate/retirement">IRA/401(k)/403(b) Retirement Calculation</a>
+								</li>
+								<li><a href="https://calculator.com/calculate/stocks-vs-bonds">Stocks vs. Bonds</a></li>
+							</ul>
+
+						</div>
+
+						<div id="calc_calc">
+							<center>
+								<br>
+								<table>
+									<tbody>
+										<tr>
+											<td>
+												<center>
+													<h3>Your interest rate per period is ????? % for 12 total periods ( 1 years)</h3>
+													<table border="1" cellpading="5" cellspacing="0">
+														<tbody>
+															<tr>
+																<th>Period</th>
+																<th>Years</th>
+																<th>Balance</th>
+																<th>Interest</th>
+																<th>Principal</th>
+															</tr>
+															<tr>
+																<td> 1</td>
+																<td> 0.083</td>
+																<td> 200.00</td>
+																<td> 0.17</td>
+																<td> 0.83</td>
+															</tr>
+															<tr>
+																<td> 2</td>
+																<td> 0.167</td>
+																<td> 199.17</td>
+																<td> 0.17</td>
+																<td> 0.83</td>
+															</tr>
+															<tr>
+																<td> 3</td>
+																<td> 0.250</td>
+																<td> 198.34</td>
+																<td> 0.17</td>
+																<td> 0.83</td>
+															</tr>
+															<tr>
+																<td> 4</td>
+																<td> 0.333</td>
+																<td> 197.51</td>
+																<td> 0.16</td>
+																<td> 0.84</td>
+															</tr>
+															<tr>
+																<td> 5</td>
+																<td> 0.417</td>
+																<td> 196.67</td>
+																<td> 0.16</td>
+																<td> 0.84</td>
+															</tr>
+															<tr>
+																<td> 6</td>
+																<td> 0.500</td>
+																<td> 195.83</td>
+																<td> 0.16</td>
+																<td> 0.84</td>
+															</tr>
+															<tr>
+																<td> 7</td>
+																<td> 0.583</td>
+																<td> 194.99</td>
+																<td> 0.16</td>
+																<td> 0.84</td>
+															</tr>
+															<tr>
+																<td> 8</td>
+																<td> 0.667</td>
+																<td> 194.15</td>
+																<td> 0.16</td>
+																<td> 0.84</td>
+															</tr>
+															<tr>
+																<td> 9</td>
+																<td> 0.750</td>
+																<td> 193.31</td>
+																<td> 0.16</td>
+																<td> 0.84</td>
+															</tr>
+															<tr>
+																<td> 10</td>
+																<td> 0.833</td>
+																<td> 192.47</td>
+																<td> 0.16</td>
+																<td> 0.84</td>
+															</tr>
+															<tr>
+																<td> 11</td>
+																<td> 0.917</td>
+																<td> 191.63</td>
+																<td> 0.16</td>
+																<td> 0.84</td>
+															</tr>
+															<tr>
+																<td> 12</td>
+																<td> 1.000</td>
+																<td> 190.79</td>
+																<td> 0.16</td>
+																<td> 0.84</td>
+															</tr>
+															<tr>
+																<td> 13</td>
+																<td> 1.083</td>
+																<td> 189.95</td>
+																<td> 0.16</td>
+																<td> 0.84</td>
+															</tr>
+														</tbody>
+													</table>
+													<h3>Total Payments: $ 13.00 <br>Total Interest $ 2.11</h3>
+												</center>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<div id="cal_form" style="position:relative;">
+									<form id="main" name="main" method="post">
+										<div id="input" class="fieldset-div" style="">
+											<input type="hidden" name="formname" value="input">
+											<div class="calcfield"><a style="visibility:visible" id="aA-tip" href="javascript:void(0);"
+													onclick="toolTip(&#39;A-tip&#39; , 30);">Loan Amount</a> <br> <input id="A" type="number"
+													class="mlfield" value="200" name="A"> </div>
+											<!-- end of calcfield -->
+											<div class="calcfield"><a style="visibility:visible" id="aR-tip" href="javascript:void(0);"
+													onclick="toolTip(&#39;R-tip&#39; , 30);">Annual Interest Rate</a> <br> <input id="R"
+													type="number" class="mlfield" value="1" name="R"> </div>
+											<!-- end of calcfield -->
+											<div class="calcfield"><a style="visibility:visible" id="aP-tip" href="javascript:void(0);"
+													onclick="toolTip(&#39;P-tip&#39; , 30);">Payment Each Period</a> <br> <input id="P"
+													type="number" class="mlfield" value="1" name="P"> </div>
+											<!-- end of calcfield -->
+											<div class="tip" id="tT-tip" style="display:none;"> </div>
+											<div class="tooltip" id="T-tip" style="display:none;" onclick="toolTip(&#39;T-tip&#39;);">12 for
+												monthly, 26 for bi-weekly, 52 for weekly, etc.</div>
+											<div class="calcfield"><a style="visibility:visible" id="aT-tip" href="javascript:void(0);"
+													onclick="toolTip(&#39;T-tip&#39; , 30);">Periods per Year</a> <br> <input id="T" type="number"
+													class="mlfield" value="12" name="T"> </div>
+											<!-- end of calcfield -->
+											<div class="calcfield"><a style="visibility:visible" id="aY-tip" href="javascript:void(0);"
+													onclick="toolTip(&#39;Y-tip&#39; , 30);">Total Number of Payments</a> <br> <input id="Y"
+													type="number" class="mlfield" value="12" name="Y"> </div>
+											<!-- end of calcfield -->
+											<div class="calcfield"><a style="visibility:visible" id="aX-tip" href="javascript:void(0);"
+													onclick="toolTip(&#39;X-tip&#39; , 30);">OR Total Number of Years</a> <br> <input id="X"
+													type="number" class="mlfield" value="1" name="X"> </div>
+											<!-- end of calcfield -->
+										</div> <!-- end of class=fieldset-div -->
+										<fieldset class="noframe">
+
+											<div id="buttons" class="fieldset-div" style="">
+												<input type="hidden" name="formname" value="buttons"><input type="submit" class="mlfield_submit"
+													name="calculate" value="Calculate"> <input type="button" name="clear" value="Clear"
+													onclick="clearForm(this.form);"> </div> <!-- end of class=fieldset-div -->
+										</fieldset>
+
+										<div id="" class="fieldset-div" style="">
+											<input type="hidden" name="formname" value=""></div> <!-- end of class=fieldset-div -->
+									</form>
+								</div>
+								<div id="calc_instructions">
+
+									<div class="tooltip" id="instructions-tip" style="display:none;"
+										onclick="toolTip(&#39;instructions-tip&#39;);">
+										Calculator instructions here
+									</div>
+									<div class="tip" id="tinstructions-tip" style="display:none;"></div>
+									<a id="ainstructions-tip" href="javascript:void(0);"
+										onclick="toolTip(&#39;instructions-tip&#39; , -40);">Instructions</a>
+
+								</div>
+
+
+
+
+						</div>
+
+					</div>
+					<div id="calc_social">
+						<script type="text/javascript">
+							function docReady() {
+								//fixHeight('calc_calc' , 'calc_dir');
+							}
+
+
+							function fixHeight(id, fixid) {
+
+								var e = document.getElementById(id);
+								var e2 = document.getElementById(fixid);
+								e2.style.height = e.offsetHeight - 13 + 'px';
+							}
+
+							function GetOffset(object, offset) {
+								if (!object)
+									return;
+								offset.x += object.offsetLeft;
+								offset.y += object.offsetTop;
+
+								GetOffset(object.offsetParent, offset);
+							}
+							var current_tip = '';
+
+							function hideToolTip(id) {
+								var elm = document.getElementById(id);
+								var telm = document.getElementById('t' + id);
+								elm.style.display = 'none';
+								telm.style.display = 'none';
+
+							}
+
+							function toolTip5(id, apos) {
+
+								//alert ('tip');
+								//alert (current_tip);
+
+
+								/**/
+
+
+								var elm = document.getElementById(id);
+								var aelm = document.getElementById('a' + id);
+								var celm = document.getElementById('calc_calc');
+								var telm = document.getElementById('t' + id);
+
+								if (elm.style.display == 'none') {
+
+									if (current_tip != '') {
+										hideToolTip(current_tip); //hide it
+									}
+									current_tip = id;
+
+									//alert(elm.offsetTop+" "+ celm.offsetTop+" "+ offset.y);	
+									var offset = {
+										x: 0,
+										y: 0
+									};
+									var offset2 = {
+										x: 0,
+										y: 0
+									};
+									//alert(elm.offsetTop+" "+ celm.offsetTop+" "+ offset.y);	
+									GetOffset(celm, offset);
+									GetOffset(aelm, offset2);
+									var kedro = aelm.offsetWidth / 2;
+									var kedrovert = aelm.offsetHeight;
+									//alert(elm.offsetHeight);
+
+									if (apos >= 0) {
+										//alert(apos);
+										elm.style.top = offset2.y - offset.y + kedrovert + 14 - 18 + 'px'; //14 for the height of the arrow tip
+										telm.style.top = offset2.y - offset.y + kedrovert - 18 + 'px';
+										telm.style.left = offset2.x - offset.x + kedro - 14 - 18 +
+										'px'; //14 for the half the width of the arrow tip
+									} else {
+
+										//alert(aelm.offsetHeight);
+										//alert(aelm.offsetHeight);
+										//alert(celm.offsetHeight);
+										//alert(offset2'y);
+										//alert(offset.y);
+
+										elm.style.bottom = celm.offsetHeight + offset.y - offset2.y - 9 + 'px';
+										telm.style.bottom = celm.offsetHeight + offset.y - offset2.y - 14 - 9 + 'px';
+
+										telm.style.borderWidth = '14px 14px 0 14px';
+										telm.style.left = offset2.x - offset.x + kedro - 14 - 18 + 'px';
+
+									}
+
+									elm.style.display = 'block';
+									telm.style.display = 'block';
+
+
+									//alert(elm.offsetTop+" "+ offset2.y+" "+ offset.y);	
+								} else {
+									elm.style.display = 'none';
+									telm.style.display = 'none';
+								}
+							}
+						</script>
+
+
+						<!-- Place this tag where you want the su badge to render -->
+						<div style="float:right; position:relative; padding-right:224px;">
+							<div id="___plusone_0" style="position: absolute; width: 450px; left: -10000px;">
+							</div>
+							<g:plusone size="medium" data-gapiscan="true" data-onload="true" data-gapistub="true"></g:plusone>
+
+							<!-- -->
+						</div>
+						<!-- Place this snippet wherever appropriate  -->
+
+
+						<div id="fb-root" class=" fb_reset">
+							<div style="position: absolute; top: -10000px; width: 0px; height: 0px;">
+								<div>
+
+								</div>
+							</div>
+						</div>
+
+
+						<div style="padding-left:5px;padding-bottom:10px;padding-right:20px;float:left;position: relative;"
+							class="fb-like" data-send="true" data-layout="button_count" data-width="90" data-show-faces="false"></div>
+
+
+
+
+
+
+						<div style=" margin-right:-25px;position:relative;">
+							<!--  -->
+
+
+						</div>
+
+
+
+
+					</div>
+					<div id="calc_mid_ad">
+
+						<div style="">
+							<!-- google ad -->
+
+
+
+							<ins id="aswift_1_expand"
+								style="display:inline-table;border:none;height:15px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"
+								data-ad-slot="6740008465"><ins id="aswift_1_anchor"
+									style="display:block;border:none;height:15px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;">
+
+								</ins></ins>
+							<!-- end google ad -->
+						</div>
+					</div>
+					<div id="calc_parts">
+						<div class="part">
+							<h2 class="part_title"><a id="aexplain"
+									style="background:url(/common/img/arrowright_blue.png) left no-repeat;padding-left:20px"
+									href="javascript:void(0);" onclick="toggleShow(&quot;explain&quot;);">Explanations</a></h2>
+							<div id="explain" class="part_text" style="display:none;">
+								<div class="roundrect"></div>
+							</div>
+						</div><!-- end of part -->
+						<div class="part">
+							<h2 class="part_title"><a id="acredits"
+									style="background:url(/common/img/arrowright_blue.png) left no-repeat;padding-left:20px"
+									href="javascript:void(0);" onclick="toggleShow(&quot;credits&quot;);">Credits</a></h2>
+							<div id="credits" class="part_text" style="display:none;">
+								<div class="roundrect">General Loan version 0.1<br>Writen by Hugh Chu<br><b><br>Credits<br></b>Written
+									by Hugh Chu Revised by Nicholas Alston</div>
+							</div>
+						</div><!-- end of part -->
+					</div>
+
+					<div id="calc_bottom">©2020 calculator.com. All rights reserved.</div>
+				</div>
+			</div> <!-- end awa_main div -->
+
+			<div id="awa_right">
+
+
+				<ins id="aswift_2_expand"
+					style="display:inline-table;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px;background-color:transparent;"
+					data-ad-slot="7272841536"><ins id="aswift_2_anchor"
+						style="display:block;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px;background-color:transparent;">
+
+					</ins></ins>
+
+			</div>
+		</div> <!-- end awa_body div -->
+
+		<div id="awa_foot"></div>
+	</div> <!-- end outside div -->
+
+	<!-- jQuery  -->
+
+	<!-- Bootstrap Core JavaScript -->
+
+	<script src="./General Loan Calculator response_files/bootstrap.min.js.download"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+	</script>
+	<!-- Bootstrap Core JavaScript -->
+
+</body>
