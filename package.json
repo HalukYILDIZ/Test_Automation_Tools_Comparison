@@ -37,7 +37,7 @@
   "dependencies": {
     "casperjs": "^1.1.4",
     "chromedriver": "^78.0.1",
-    "fast-csv": "^4.0.2",
+    "fast-csv": "^4.3.6",
     "geckodriver": "^1.19.1",
     "phantom": "^6.3.0",
     "puppeteer": "^2.0.0",
